@@ -23,4 +23,19 @@ data.forEach((dataRow) => {
 function handleClick() {
     let date = d3.select("#datetime").property("value");
     let filtererdData = tableData;
+
+
+// add if statement for filtering the date
+if (date) {
+    filteredData = fiteredData.filter(row => row.datetime === date);
 }
+
+// Rebuild the table using the filtered data
+buildTable(filteredData);
+};
+
+// Attach an event to listen for the form button
+d3.selectAll("#filter-btn").on("click", handleClick);
+
+// Build the table when page loads
+buildTable(tableData);
