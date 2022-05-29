@@ -29,12 +29,12 @@ var filterSearch = {};
 // 3. Use this function to update the filters. 
 function updateFilters() {
 
-    // 4a. Save the element that was changed as a variable.
+    // 4.
   let changedElement = d3.select(this);
-    // 4b. Save the value that was changed as a variable.
+
   let elementValue = changedElement.property("value");
   console.log(elementValue);
-    // 4c. Save the id of the filter that was changed as a variable.
+  
   let filterId = changedElement.attr("id");
   console.log(filterId);
   
